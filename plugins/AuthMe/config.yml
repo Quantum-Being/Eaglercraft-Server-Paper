@@ -104,10 +104,10 @@ settings:
         # The next time the player joins the server, if his IP
         # is the same as last time and the timeout hasn't
         # expired, he will not need to authenticate.
-        enabled: false
+        enabled: true
         # After how many minutes should a session expire?
         # A player's session ends after the timeout or if his IP has changed
-        timeout: 10
+        timeout: 5
     # Message language, available languages:
     # https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/translations.md
     messagesLanguage: en
@@ -121,12 +121,12 @@ settings:
     # typical communication with the database to happen synchronously, set this to false
     useAsyncTasks: true
     # The name of the server, used in some placeholders.
-    serverName: Your Minecraft Server
+    serverName: The Quantmania
     restrictions:
         # Can not authenticated players chat?
         # Keep in mind that this feature also blocks all commands not
         # listed in the list below.
-        allowChat: false
+        allowChat: true
         # Hide the chat log from players who are not authenticated?
         hideChat: false
         # Allowed commands for unauthenticated players
@@ -142,7 +142,7 @@ settings:
         - /totp
         # Max number of allowed registrations per IP
         # The value 0 means an unlimited number of registrations!
-        maxRegPerIp: 0
+        maxRegPerIp: 2
         # Minimum allowed username length
         minNicknameLength: 3
         # Maximum allowed username length
@@ -165,7 +165,7 @@ settings:
             - world_nether
             - world_the_end
         # This option will save the quit location of the players.
-        SaveQuitLocation: false
+        SaveQuitLocation: true
         # To activate the restricted user feature you need
         # to enable this option and configure the AllowedRestrictedUser field.
         AllowRestrictedUser: false
@@ -196,7 +196,7 @@ settings:
         allowedNicknameCharacters: '[a-zA-Z0-9_]*'
         # How far can unregistered players walk?
         # Set to 0 for unlimited radius
-        allowedMovementRadius: 100
+        allowedMovementRadius: 1
         # Should we protect the player inventory before logging in? Requires ProtocolLib.
         ProtectInventoryBeforeLogIn: true
         # Should we deny the tabcomplete feature before logging in? Requires ProtocolLib.
@@ -374,7 +374,7 @@ Email:
     # Whitelist ONLY these domains for emails
     emailWhitelisted: []
     # Send the new password drawn in an image?
-    generateImage: false
+    generateImage: 
     # The OAuth2 token
     emailOauth2Token: ''
 Hooks:
